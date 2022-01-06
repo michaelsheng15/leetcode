@@ -4,18 +4,13 @@ class Solution {
         int[] result = new int[2]; 
         HashMap<Integer, Integer> map = new HashMap<>();
         
-        
         for(int i = 0; i < nums.length; i++){
-            if(map.containsKey(target - nums[i])){
-                System.out.println("here" + i);
-                result[0] = i;
-                result[1] = map.get(target - nums[i]);
+            if(map.containsKey(target - nums[i])){                
+                return new int[] {map.get(target - nums[i]), i};
             }
             map.put(nums[i], i);
-         
         }
-        
-        return result;
+        return null;
     }
 }
 
