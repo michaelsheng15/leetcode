@@ -13,7 +13,6 @@ class Solution {
             }else if (nums[pivot] == target){
                 return pivot;
             }
-            
             pivot = (right + left)/2;
         }
         return -1;
