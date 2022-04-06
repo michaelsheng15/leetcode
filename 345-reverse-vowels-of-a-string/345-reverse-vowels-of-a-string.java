@@ -6,7 +6,6 @@ class Solution {
         char temp = 'a';
         String vowels = "aeiouAEIOU";
         
-        
         while(left < right){
             if(vowels.indexOf(arr[left]) == -1){
                 left++;
@@ -21,7 +20,6 @@ class Solution {
             left++;
             right--;
         }
-        
         return String.valueOf(arr);
     }
 }
