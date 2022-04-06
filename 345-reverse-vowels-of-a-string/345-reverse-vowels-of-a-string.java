@@ -3,7 +3,6 @@ class Solution {
         char[] arr = s.toCharArray();
         int left = 0;
         int right = arr.length-1;
-        char temp = 'a';
         String vowels = "aeiouAEIOU";
         
         while(left < right){
@@ -14,7 +13,7 @@ class Solution {
                 right--;
                 continue;
             }
-            temp = arr[left];
+            char temp = arr[left];
             arr[left] = arr[right];
             arr[right] = temp;
             left++;
