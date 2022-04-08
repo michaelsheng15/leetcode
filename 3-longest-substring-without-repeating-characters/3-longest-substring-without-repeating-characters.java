@@ -4,21 +4,22 @@ class Solution {
         int left = 0;
         int right = 0;
         int max = 0;
-        
+       
         while(right < s.length()){
             if(chars.contains(s.charAt(right))){
-                chars.clear();
                 left++;
                 right = left;
+                chars.clear();
             }else{
                 chars.add(s.charAt(right));
                 right++;
             }
             
-            if(chars.size() > max){
-                max = chars.size();
+            if(right - left > max){
+                max = right - left;
             }
         }
+        
         return max;
     }
 }
