@@ -6,6 +6,7 @@ class Solution {
             for(int i = 0; i < word.length(); i++){
                 if(allowed.indexOf(word.charAt(i)) == -1){
                     containsAllowed = false;
+                    continue;
                 }
             }
             if(containsAllowed){
